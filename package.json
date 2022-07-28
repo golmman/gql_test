@@ -7,6 +7,7 @@
     "license": "MIT",
     "scripts": {
         "build": "tsc",
+        "compose": "rover supergraph compose --config ./src/gateway/supergraph.yaml > ./src/gateway/supergraph_schema.gql",
         "start": "yarn build && node dist",
         "start:gateway": "yarn build && node dist/gateway/gateway.js",
         "start:simple": "yarn build && node dist/simple/simple.js"

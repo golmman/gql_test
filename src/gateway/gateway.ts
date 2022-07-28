@@ -1,7 +1,10 @@
 import { ApolloServer } from 'apollo-server';
 import { ApolloGateway } from '@apollo/gateway';
+import { readFileSync } from 'fs';
 
-const gateway = new ApolloGateway();
+const supergraphSdl = readFileSync('./src/gateway/supergraph_schema.gql').toString();
+
+const gateway = new ApolloGateway({ supergraphSdl });
 
 const server = new ApolloServer({
     gateway,
