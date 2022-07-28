@@ -7,6 +7,7 @@ const server = new ApolloServer({
     gateway,
 });
 
+// https://www.apollographql.com/docs/federation/quickstart/setup#1-install-the-rover-cli
 server
     .listen()
     .then(({ url }) => {

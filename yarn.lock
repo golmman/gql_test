@@ -91,6 +91,13 @@
     deep-equal "^2.0.5"
     pretty-format "^27.0.0"
 
+"@apollo/subgraph@^2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@apollo/subgraph/-/subgraph-2.0.5.tgz#79bd284da1b9ba1196e7de9973654c878f21ae88"
+  integrity sha512-bnxxoYmlalYJ5wiE2iOYae6bc9fHKik0zOHGcfTLpIm/T3l+1J0Gj5QIVYOs7u/agduo3VGjm8MQbvrtNHJExg==
+  dependencies:
+    "@apollo/federation-internals" "^2.0.5"
+
 "@apollo/utils.createhash@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@apollo/utils.createhash/-/utils.createhash-1.1.0.tgz#b18a353008d2583a34eaebaf471aff6e15360172"

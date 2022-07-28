@@ -7,10 +7,13 @@
     "license": "MIT",
     "scripts": {
         "build": "tsc",
-        "start": "yarn build && node dist"
+        "start": "yarn build && node dist",
+        "start:gateway": "yarn build && node dist/gateway/gateway.js",
+        "start:simple": "yarn build && node dist/simple/simple.js"
     },
     "dependencies": {
         "@apollo/gateway": "^2.0.5",
+        "@apollo/subgraph": "^2.0.5",
         "apollo-server": "^3.10.0",
         "graphql": "^16.5.0"
     },
