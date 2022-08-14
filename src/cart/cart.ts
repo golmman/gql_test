@@ -1,21 +1,10 @@
 import { ApolloServer, gql } from 'apollo-server';
 import { buildSubgraphSchema } from '@apollo/subgraph';
+import { readFileSync } from 'node:fs';
 
+const schema = readFileSync('./src/cart/cart.gql');
 const typeDefs = gql`
-    extend schema
-        @link(
-            url: "https://specs.apollo.dev/federation/v2.0"
-            import: ["@key", "@shareable"]
-        )
-
-    type Query {
-        me: User
-    }
-
-    type User @key(fields: "id") {
-        id: ID!
-        username: String
-    }
+    ${schema}
 `;
 
 const resolvers = {
@@ -35,6 +24,6 @@ const server = new ApolloServer({
     schema: buildSubgraphSchema({ typeDefs, resolvers }),
 });
 
-server.listen(4001).then(({ url }) => {
+server.listen(4002).then(({ url }) => {
     console.log(`🚀 Server ready at ${url}`);
 });

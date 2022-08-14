@@ -3,7 +3,8 @@
 echo 'Starting terminals with configured commands...'
 
 COMMANDS=(
-    'yarn start:simple'
+    'yarn start:cart'
+    'yarn start:product'
     'yarn start:gateway'
 )
 

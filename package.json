@@ -8,9 +8,10 @@
     "scripts": {
         "build": "tsc",
         "compose": "rover supergraph compose --config ./src/gateway/supergraph.yaml > ./src/gateway/supergraph_schema.gql",
-        "start": "yarn build && node dist",
+        "start": "./start.sh",
         "start:gateway": "yarn build && node dist/gateway/gateway.js",
-        "start:simple": "yarn build && node dist/simple/simple.js"
+        "start:cart": "yarn build && node dist/cart/cart.js",
+        "start:product": "yarn build && node dist/product/product.js"
     },
     "dependencies": {
         "@apollo/gateway": "^2.0.5",
