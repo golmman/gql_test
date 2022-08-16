@@ -17,8 +17,8 @@
         "build": "tsc",
         "compose": "rover supergraph compose --config ./src/gateway/supergraph.yaml > ./src/gateway/supergraph_schema.gql",
         "start": "./start.sh",
+        "start:cart": "yarn compile && yarn workspace cart start",
         "start:gateway": "yarn build && node dist/gateway/gateway.js",
-        "start:cart": "yarn build && node dist/cart/cart.js",
         "start:product": "yarn build && node dist/product/product.js"
     },
     "dependencies": {

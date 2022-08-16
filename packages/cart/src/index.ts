@@ -2,7 +2,7 @@ import { ApolloServer, gql } from 'apollo-server';
 import { buildSubgraphSchema } from '@apollo/subgraph';
 import { readFileSync } from 'node:fs';
 
-const schema = readFileSync('./src/cart/cart.gql');
+const schema = readFileSync('./src/cart.gql');
 const typeDefs = gql`
     ${schema}
 `;
