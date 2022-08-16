@@ -1,11 +1,19 @@
 {
+    "private": true,
     "name": "gql_test",
     "version": "1.0.0",
     "main": "index.js",
     "repository": "git@github.com:golmman/gql_test.git",
     "author": "Dirk Kretschmann <kretschmanndi@gmail.com>",
     "license": "MIT",
+    "packageManager": "yarn@3.2.2",
+    "workspaces": [
+        "./packages/cart/",
+        "./packages/gateway/",
+        "./packages/product/"
+    ],
     "scripts": {
+        "compile": "tsc --build --force tsconfig.json",
         "build": "tsc",
         "compose": "rover supergraph compose --config ./src/gateway/supergraph.yaml > ./src/gateway/supergraph_schema.gql",
         "start": "./start.sh",
@@ -20,7 +28,6 @@
         "graphql": "^16.5.0"
     },
     "devDependencies": {
-        "@apollo/rover": "^0.8.1",
         "prettier": "^2.7.1",
         "typescript": "^4.7.4"
     }
