@@ -1,9 +1,6 @@
 services:
   cart:
     build: ./packages/cart/
-    networks:
-      - frontend
-      - backend
     deploy:
       resources:
         limits:
