@@ -8,3 +8,27 @@ services:
         limits:
           cpus: '0.1'
           memory: 64M
+    ports:
+      - "4002:4002"
+  gateway:
+    build:
+      context: .
+      dockerfile: package.gateway.Dockerfile
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 64M
+    ports:
+      - "4000:4000"
+  product:
+    build:
+      context: .
+      dockerfile: package.product.Dockerfile
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 64M
+    ports:
+      - "4001:4001"

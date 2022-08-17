@@ -4,10 +4,10 @@ subgraphs:
   product:
     routing_url: http://localhost:4001
     schema:
-      file: ../product/product.gql
+      file: ../../product/src/product.gql
       #subgraph_url: http://localhost:4001
   cart:
     routing_url: http://localhost:4002
     schema:
-      file: ../cart/cart.gql
+      file: ../../cart/src/cart.gql
       #subgraph_url: http://localhost:4002

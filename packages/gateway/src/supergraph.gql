@@ -20,6 +20,7 @@ scalar join__FieldSet
 
 enum join__Graph {
   CART @join__graph(name: "cart", url: "http://localhost:4002")
+  PRODUCT @join__graph(name: "product", url: "http://localhost:4001")
 }
 
 scalar link__Import
@@ -36,10 +37,24 @@ enum link__Purpose {
   EXECUTION
 }
 
+type Product
+  @join__type(graph: PRODUCT, key: "id")
+{
+  id: ID!
+  username: String
+}
+
 type Query
   @join__type(graph: CART)
+  @join__type(graph: PRODUCT)
 {
-  me: User
+  me: User @join__field(graph: CART)
+}
+
+type Query1
+  @join__type(graph: PRODUCT)
+{
+  me: Product
 }
 
 type User

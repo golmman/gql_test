@@ -13,13 +13,9 @@
         "./packages/product/"
     ],
     "scripts": {
-        "compile": "tsc --build --force tsconfig.json",
-        "build": "tsc",
-        "compose": "rover supergraph compose --config ./src/gateway/supergraph.yaml > ./src/gateway/supergraph_schema.gql",
-        "start": "./start.sh",
-        "start:cart": "yarn compile && yarn workspace cart start",
-        "start:gateway": "yarn build && node dist/gateway/gateway.js",
-        "start:product": "yarn build && node dist/product/product.js"
+        "build": "tsc --build --force tsconfig.json",
+        "compose": "rover supergraph compose --config ./packages/gateway/src/supergraph.yaml > ./packages/gateway/src/supergraph.gql",
+        "start": "yarn build && docker compose up --build"
     },
     "dependencies": {
         "@apollo/gateway": "^2.0.5",
