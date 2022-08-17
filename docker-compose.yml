@@ -1,6 +1,8 @@
 services:
   cart:
-    build: ./packages/cart/
+    build:
+      context: .
+      dockerfile: package.cart.Dockerfile
     deploy:
       resources:
         limits:
