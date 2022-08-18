@@ -15,7 +15,7 @@
     "scripts": {
         "build": "tsc --build --force tsconfig.json",
         "compose": "rover supergraph compose --config ./packages/gateway/src/supergraph.yaml > ./packages/gateway/src/supergraph.gql",
-        "start": "yarn build && docker compose up --build"
+        "start": "yarn build && yarn compose && docker compose up --build"
     },
     "dependencies": {
         "@apollo/gateway": "^2.0.5",

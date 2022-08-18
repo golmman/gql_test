@@ -2,12 +2,12 @@
 federation_version: 2
 subgraphs:
   product:
-    routing_url: http://localhost:4001
+    routing_url: http://product:4001
     schema:
       file: ../../product/src/product.gql
       #subgraph_url: http://localhost:4001
   cart:
-    routing_url: http://localhost:4002
+    routing_url: http://cart:4002
     schema:
       file: ../../cart/src/cart.gql
       #subgraph_url: http://localhost:4002

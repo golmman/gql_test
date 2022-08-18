@@ -19,8 +19,8 @@ directive @link(url: String, as: String, for: link__Purpose, import: [link__Impo
 scalar join__FieldSet
 
 enum join__Graph {
-  CART @join__graph(name: "cart", url: "http://localhost:4002")
-  PRODUCT @join__graph(name: "product", url: "http://localhost:4001")
+  CART @join__graph(name: "cart", url: "http://cart:4002")
+  PRODUCT @join__graph(name: "product", url: "http://product:4001")
 }
 
 scalar link__Import
